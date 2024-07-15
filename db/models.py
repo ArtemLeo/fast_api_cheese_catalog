@@ -1,12 +1,13 @@
 from enum import StrEnum, auto
 
-from sqlalchemy import Column, String, Integer, ForeignKey
+from sqlalchemy import Column, String, Integer, ForeignKey, Enum
+from sqlalchemy.orm import relationship
 
 from db.engine import Base
 
 
 class PackagingType(StrEnum):
-    IN_PACKAGING = auto()
+    IN_PACKAGE = auto()
     WEIGHT = auto()
 
 
